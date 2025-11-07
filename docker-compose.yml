@@ -1,0 +1,17 @@
+# docker-compose.yml  (FINAL VERSION FOR ATTENDEES)
+
+version: '3.8'
+
+services:
+  workshop:
+    # This is the most important change. Instead of 'build: .', we point
+    # directly to the image you pushed to Docker Hub.
+    image: anthonychristidis/spatial-workshop:v1.3
+
+    # The port mapping remains the same.
+    ports:
+      - "8888:8888"
+
+    # The 'volumes' section is removed. We want attendees to use the
+    # notebooks and data that are BAKED INTO the image to ensure 100%
+    # reproducibility. This is the simplest and safest approach.

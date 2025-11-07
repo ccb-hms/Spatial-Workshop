@@ -19,3 +19,9 @@ notebooks/spatialdata-sandbox
 *.tif
 *.tiff
 *.h5
+
+# Presentation and Document Files
+*.pptx
+*.ppt
+*.key
+*.odp
