@@ -46,7 +46,7 @@ This is the simple process you will use to start the workshop each time.
     ```
 
 ### Step 2: Launch the Container
-*   This single command will download the ~8 GB workshop image (the first time only) and start the environment.
+*   This single command will download the ~6.5 GB workshop image (the first time only) and start the environment.
     ```bash
     docker-compose up
     ```
