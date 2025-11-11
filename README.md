@@ -8,6 +8,12 @@ In this 3-hour workshop, you will learn how to load, explore, and analyze data f
 
 ---
 
+## 📋 Workshop Materials
+
+**Introduction Slides:** Before diving into the hands-on notebooks, we'll start with a brief presentation introducing the scverse ecosystem and SpatialData framework. You can access the slides here: [scverse](https://docs.google.com/presentation/d/1JtF5KmWrMf8-J-BDth-vwqB2Ie8qki9R/edit?usp=drive_link&ouid=106527443230334727646&rtpof=true&sd=true)
+
+The workshop is organized into 4 interactive Jupyter notebooks that build on each other, taking you from basic concepts to advanced spatial analysis techniques.
+
 ## 💻 Workshop Environment Setup
 
 To ensure a reproducible setup, this workshop runs inside a **[Docker](https://docker.com) container**. This self-contained "Workshop in a Box" includes the necessary software, system dependencies, and example data -- pre-installed and ready to go.
