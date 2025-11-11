@@ -50,6 +50,10 @@ Follow these 3 steps to start the workshop:
     ```bash
     docker-compose up
     ```
+    ... or, if you're running Docker v2:
+    ```bash
+    docker compose up
+    ```
 *   **Note:** The first time you run this, it will take a while to download the image. Please do this on a stable internet connection **at least one day before the workshop to avoid overwhelming the Harvard network on the day of the workshop**.
 
 ### Step 3: Access JupyterLab
