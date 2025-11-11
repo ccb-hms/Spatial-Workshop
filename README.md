@@ -74,8 +74,21 @@ cd Spatial-Workshop
 conda env create -f environment.yaml
 conda activate spatial-workshop
 
-# 3. Download the workshop data (~2.5 GB)
-# [INSERT_ZENODO_DOWNLOAD_COMMAND_HERE]
+# 3. Download and extract the workshop data (~1.5 GB)
+
+# Install gdown (Google Drive downloader)
+pip install gdown
+
+# Download the data
+gdown "1WGIxjywr3azsdGG4gSKRhlEKKhWPePG5" -O spatial-workshop-data.zip
+
+# Extract the data
+tar -xf spatial-workshop-data.zip      # Windows
+unzip spatial-workshop-data.zip        # Mac/Linux
+
+# Clean up the zip file
+del spatial-workshop-data.zip          # Windows  
+rm spatial-workshop-data.zip           # Mac/Linux
 
 # 4. Start JupyterLab
 jupyter lab
