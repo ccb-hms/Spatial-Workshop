@@ -46,7 +46,7 @@ Follow these 3 steps to start the workshop:
     ```
 
 ### Step 2: Launch the Container
-*   Download the ~6.5 GB workshop image (download once) and start the environment.
+*   Download the workshop image (~3.2 GB download, expands to ~6.5 GB locally) and start the environment.
     ```bash
     docker-compose up
     ```
