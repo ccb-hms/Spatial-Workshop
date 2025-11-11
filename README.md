@@ -14,6 +14,8 @@ In this 3-hour workshop, you will learn how to load, explore, and analyze data f
 
 The workshop is organized into 4 interactive Jupyter notebooks that build on each other, taking you from basic concepts to advanced spatial analysis techniques.
 
+---
+
 ## 💻 Workshop Environment Setup
 
 To ensure a reproducible setup, this workshop runs inside a **[Docker](https://docker.com) container**. This self-contained "Workshop in a Box" includes the necessary software, system dependencies, and example data -- pre-installed and ready to go.
@@ -59,14 +61,14 @@ Follow these 3 steps to start the workshop:
     *If the above doesn't work, try the legacy version:*
     ```bash
     docker-compose up
-    ```ompose up
     ```
-*   **Note:** The first time you run this, it will take a while to download the image. Please do this on a stable internet connection **at least one day before the workshop to avoid overwhelming the Harvard network on the day of the workshop**.
+*   **Note:** The first time you run this, it will take a while to download the image. Please do this on a stable internet connection **at least one day before the workshop**.
 
 ### Step 3: Access JupyterLab
-*   Confirm that you see log messages from the Jupyter server in the terminal,
-*   Look for a URL that starts with `http://127.0.0.1:8888/lab?token=...`,
-*   Copy the full URL and paste it into your web browser (Chrome or Firefox recommended).
+*   Confirm that you see log messages from the Jupyter server in the terminal
+*   Look for a message saying `Jupyter Server` is running
+*   Open your web browser and go to: **`http://127.0.0.1:8888/lab`**
+*   You should see JupyterLab load directly without any password prompt
 
 You are now inside the workshop environment! You can open the notebooks from the file browser on the left and start the exercises.
 
@@ -76,9 +78,35 @@ You are now inside the workshop environment! You can open the notebooks from the
 
 ### Issue: "Password or token required" in Jupyter
 If you see a login screen instead of direct access to JupyterLab:
-1. Try the URL without any token: `http://127.0.0.1:8888/lab`
-2. If that doesn't work, restart the container: `Ctrl+C` then `docker compose up`
-3. Still having issues? Please contact us before the workshop.
+1. Try refreshing the page: `http://127.0.0.1:8888/lab`
+2. Restart the container: Press `Ctrl+C` in the terminal, then run `docker compose up` again
+3. Clear your browser cache and try again
+4. Still having issues? Please contact us before the workshop
 
 ### Issue: `docker compose` command not found
-Try `docker-compose up` instead (with hyphen).
+Try `docker-compose up` instead (with hyphen). This uses the legacy Docker Compose tool.
+
+### Issue: Docker image fails to download or run
+1. Ensure Docker Desktop is running and you have a stable internet connection
+2. Try restarting Docker Desktop
+3. If you're on an Apple Silicon Mac (M1/M2), the image should work but may take longer to download
+4. As a last resort, contact us for alternative setup instructions
+
+### Issue: Port 8888 already in use
+If you see an error about port 8888 being occupied:
+1. Stop any other Jupyter servers running on your machine
+2. Or modify the port in `docker-compose.yml` by changing `"8888:8888"` to `"8889:8888"` and use `http://127.0.0.1:8889/lab`
+
+### Getting Help
+If you encounter any setup issues, please:
+1. Check the troubleshooting section above
+2. Open an issue on this GitHub repository with details about your operating system and the exact error message
+3. Contact us directly before the workshop day
+
+---
+
+## 🧹 Cleanup (Optional)
+
+After the workshop, you can free up disk space by removing the Docker image:
+```bash
+docker rmi anthonychristidis/spatial-workshop:v1.3

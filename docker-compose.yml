@@ -12,6 +12,14 @@ services:
     ports:
       - "8888:8888"
 
-    # The 'volumes' section is removed. We want attendees to use the
-    # notebooks and data that are BAKED INTO the image to ensure 100%
-    # reproducibility. This is the simplest and safest approach.
+    # Override the Jupyter command to fix authentication issues
+    command: >
+      jupyter lab 
+      --ip=0.0.0.0 
+      --port=8888 
+      --no-browser 
+      --allow-root 
+      --ServerApp.token='' 
+      --ServerApp.password='' 
+      --ServerApp.disable_check_xsrf=True
+      --ServerApp.open_browser=False
