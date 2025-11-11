@@ -20,16 +20,14 @@ In this 3-hour workshop, you will learn how to load, explore, and analyze data f
 
 We provide **two setup options** for the workshop. Choose the one that best fits your needs:
 
-### Option 1: Docker Setup (Recommended for Most Users)
+### Option 1: Docker Setup (Recommended for Docker Users)
 
 - ✅ **Everything included**: Software, data, and notebooks pre-installed
-- ✅ **Easy setup**: Just download and run
 - ❌ **Limited interactivity**: Interactive visualization tools (napari) won't work in Docker
 
 ### Option 2: Conda Environment Setup  
 
 - ✅ **Full interactivity**: All visualization tools work, including napari
-- ✅ **Native performance**: Runs directly on your system
 - ❌ **Manual setup**: Requires installing dependencies and downloading data separately
 
 ---
