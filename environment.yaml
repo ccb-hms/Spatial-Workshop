@@ -19,3 +19,6 @@ dependencies:
   - python-igraph
   - leidenalg
   - matplotlib
+  - pip
+  - pip:
+    - easy-vitessce
