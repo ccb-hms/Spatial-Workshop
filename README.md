@@ -52,13 +52,14 @@ Follow these 3 steps to start the workshop:
     ```
 
 ### Step 2: Launch the Container
-*   Download the workshop image (~3.2 GB download, expands to ~6.5 GB locally) and start the environment.
-    ```bash
-    docker-compose up
-    ```
-    ... or, if you're running Docker v2:
+*   Download the workshop image (~3.2 GB download, expands to ~6.5 GB locally) and start the environment:
     ```bash
     docker compose up
+    ```
+    *If the above doesn't work, try the legacy version:*
+    ```bash
+    docker-compose up
+    ```ompose up
     ```
 *   **Note:** The first time you run this, it will take a while to download the image. Please do this on a stable internet connection **at least one day before the workshop to avoid overwhelming the Harvard network on the day of the workshop**.
 
@@ -70,3 +71,14 @@ Follow these 3 steps to start the workshop:
 You are now inside the workshop environment! You can open the notebooks from the file browser on the left and start the exercises.
 
 ---
+
+## 🔧 Troubleshooting
+
+### Issue: "Password or token required" in Jupyter
+If you see a login screen instead of direct access to JupyterLab:
+1. Try the URL without any token: `http://127.0.0.1:8888/lab`
+2. If that doesn't work, restart the container: `Ctrl+C` then `docker compose up`
+3. Still having issues? Please contact us before the workshop.
+
+### Issue: `docker compose` command not found
+Try `docker-compose up` instead (with hyphen).
