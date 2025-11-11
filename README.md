@@ -133,6 +133,30 @@ docker rmi anthonychristidis/spatial-workshop:v1.4
 conda env remove -n spatial-workshop
 ```
 
+---
+
+## 📚 Additional Resources
+
+Continue your spatial omics journey with these comprehensive resources:
+
+### Core Documentation
+
+- **[SpatialData](https://spatialdata.scverse.org/en/stable/)** - Complete framework for spatial omics data management, storage, and analysis
+- **[Scanpy](https://scanpy.readthedocs.io/en/stable/)** - Single-cell analysis in Python with tutorials, API reference, and best practices
+- **[Squidpy](https://squidpy.readthedocs.io/en/stable/)** - Spatial molecular data analysis with advanced statistics and neighborhood analysis methods
+
+### Interactive Visualization
+
+- **[napari-spatialdata](https://spatialdata.scverse.org/projects/napari/en/latest/)** - Interactive visualization plugin for exploring spatial data in napari
+- **[Vitessce](https://vitessce.io/docs/)** - Web-based visualization platform for integrative analysis of spatial and single-cell data
+
+### Community
+
+- **[scverse](https://scverse.org)** - The broader single-cell analysis ecosystem in Python
+- **[scverse Discourse](https://discourse.scverse.org/)** - Community forum for questions, discussions, and announcements
+
+These resources provide in-depth tutorials, API documentation, and community support to help you apply these tools to your own spatial omics projects.
+
 
 
 
