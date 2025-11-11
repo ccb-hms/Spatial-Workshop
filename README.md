@@ -102,6 +102,7 @@ If you encounter setup issues:
 
 1. **Docker users**: Try `docker-compose up` (with hyphen) if `docker compose up` fails
 2. **Conda users**: Ensure you have sufficient disk space (~11 GB total: 9 GB environment + 2 GB data)
+3. **Everyone**: Don't stress about setup issues, we have backup solutions and will help everyone get running during the workshop
 
 ---
 
