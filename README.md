@@ -4,7 +4,7 @@
 
 Welcome! This repository contains the materials for the hands-on workshop on analyzing spatial omics data with Python and the [scverse](https://scverse.org) ecosystem.
 
-In this 3-hour workshop, you will learn how to load, explore, and analyze data from different spatial technologies like Visium and Xenium. We will cover established workflows, from interactive visualization with [napari](https://napari.org) to cell type clustering with [scanpy](https://scanpy.readthedocs.io) and computing spatial statistics with [squidpy](https://squidpy.readthedocs.io).
+In this 3-hour workshop, you will learn how to load, explore, and analyze data from different spatial technologies like Visium and Xenium. We will cover established workflows, from interactive visualization with [napari](https://napari.org) to cell type clustering with [Scanpy](https://scanpy.readthedocs.io) and computing spatial statistics with [Squidpy](https://squidpy.readthedocs.io).
 
 ---
 
@@ -12,7 +12,7 @@ In this 3-hour workshop, you will learn how to load, explore, and analyze data f
 
 **Introduction Slides:** Before diving into the hands-on notebooks, we'll start with a brief presentation introducing the scverse ecosystem and SpatialData framework. You can access the slides here: [Introduction to scverse](https://docs.google.com/presentation/d/1JtF5KmWrMf8-J-BDth-vwqB2Ie8qki9R/edit?usp=drive_link&ouid=106527443230334727646&rtpof=true&sd=true)
 
-The workshop is organized into 4 interactive Jupyter notebooks that build on each other, taking you from basic concepts to advanced spatial analysis techniques.
+**Jupyter Notebooks:** The workshop is organized into 4 interactive Jupyter [notebooks](https://github.com/ccb-hms/Spatial-Workshop/tree/main/notebooks) that build on each other, taking you from basic concepts to advanced spatial analysis techniques.
 
 ---
 
@@ -48,14 +48,14 @@ We provide **two setup options** for the workshop. Choose the one that best fits
 git clone https://github.com/ccb-hms/Spatial-Workshop.git
 cd Spatial-Workshop
 
-# 2. Start the workshop environment (~3.2 GB download)
+# 2. Start the workshop environment (~3 GB download, ~7 GB storage)
 docker compose up
 ```
 
 ### Access JupyterLab
 
 - Open your browser and go to: `http://127.0.0.1:8888/lab`
-- Start with Notebook 1 in the file browser
+- Browse the notebooks in the file browser and run them in any order
 
 ## 🐍 Option 2: Conda Environment Setup
 
@@ -86,7 +86,7 @@ jupyter lab
 ### Access JupyterLab
 
 - JupyterLab will open automatically in your browser
-- Start with Notebook 1 in the file browser
+- Browse the notebooks in the file browser and run them in any order
 
 ## 🚀 During the Workshop
 
@@ -103,8 +103,7 @@ jupyter lab
 If you encounter setup issues:
 
 1. **Docker users**: Try `docker-compose up` (with hyphen) if `docker compose up` fails
-2. **Conda users**: Ensure you have sufficient disk space (~5 GB total)
-3. **Everyone**: Contact us if problems persist - we have backup solutions ready
+2. **Conda users**: Ensure you have sufficient disk space (~11 GB total: 9 GB environment + 2 GB data)
 
 ---
 
