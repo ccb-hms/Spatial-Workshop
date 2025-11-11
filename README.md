@@ -16,97 +16,114 @@ The workshop is organized into 4 interactive Jupyter notebooks that build on eac
 
 ---
 
-## 💻 Workshop Environment Setup
+## 💻 Workshop Setup - Choose Your Option
 
-To ensure a reproducible setup, this workshop runs inside a **[Docker](https://docker.com) container**. This self-contained "Workshop in a Box" includes the necessary software, system dependencies, and example data -- pre-installed and ready to go.
+We provide **two setup options** for the workshop. Choose the one that best fits your needs:
 
-Please follow these **one-time setup instructions at least one day before the workshop.**
+### Option 1: Docker Setup (Recommended for Most Users)
 
-### Step 1: Install Docker Desktop
+- ✅ **Everything included**: Software, data, and notebooks pre-installed
+- ✅ **Easy setup**: Just download and run
+- ❌ **Limited interactivity**: Interactive visualization tools (napari) won't work in Docker
 
-First, we need [Docker Desktop](https://www.docker.com/products/docker-desktop/) to run the workshop container.
-*   **Action:** Go to [https://www.docker.com/products/docker-desktop/](https://www.docker.com/products/docker-desktop/) and download the installer for your operating system (Windows, Mac, or Linux).
-*   Follow the installation instructions. After the installation is complete, start the Docker Desktop application and leave it running in the background.
+### Option 2: Conda Environment Setup  
 
-### Step 2: Install Git (if you don't have it)
-
-[Git](https://git-scm.com/) is a version control tool we'll use to download the workshop files.
-*   **Action:** If you don't have Git, install it from [https://git-scm.com/downloads](https://git-scm.com/downloads).
-
-### Step 3: Clone This Repository
-
-This command will download the workshop's configuration files and analysis notebooks to your computer.
-*   **Action:** Open the terminal (PowerShell on Windows, Terminal on Mac/Linux) and run:
-    ```bash
-    git clone https://github.com/ccb-hms/Spatial-Workshop.git
-    ```
+- ✅ **Full interactivity**: All visualization tools work, including napari
+- ✅ **Native performance**: Runs directly on your system
+- ❌ **Manual setup**: Requires installing dependencies and downloading data separately
 
 ---
 
-## 🚀 Running the Workshop
+## 🐳 Option 1: Docker Setup
 
-Follow these 3 steps to start the workshop:
+### Prerequisites
 
-### Step 1: Navigate to the Workshop Folder
-*   In the terminal, change to the workshop directory we cloned above in Setup Step 3:
-    ```bash
-    cd Spatial-Workshop
-    ```
+1. **Install Docker Desktop:** Download from [docker.com/products/docker-desktop](https://www.docker.com/products/docker-desktop/) and follow installation instructions
+2. **Install Git:** Download from [git-scm.com/downloads](https://git-scm.com/downloads) (if you don't have it)
 
-### Step 2: Launch the Container
-*   Download the workshop image (~3.2 GB download, expands to ~6.5 GB locally) and start the environment:
-    ```bash
-    docker compose up
-    ```
-    *If the above doesn't work, try the legacy version:*
-    ```bash
-    docker-compose up
-    ```
-*   **Note:** The first time you run this, it will take a while to download the image. Please do this on a stable internet connection **at least one day before the workshop**.
+### Setup Steps
 
-### Step 3: Access JupyterLab
-*   Confirm that you see log messages from the Jupyter server in the terminal
-*   Look for a message saying `Jupyter Server` is running
-*   Open your web browser and go to: **`http://127.0.0.1:8888/lab`**
-*   You should see JupyterLab load directly without any password prompt
-
-You are now inside the workshop environment! You can open the notebooks from the file browser on the left and start the exercises.
-
----
-
-## 🔧 Troubleshooting
-
-### Issue: "Password or token required" in Jupyter
-If you see a login screen instead of direct access to JupyterLab:
-1. Try refreshing the page: `http://127.0.0.1:8888/lab`
-2. Restart the container: Press `Ctrl+C` in the terminal, then run `docker compose up` again
-3. Clear your browser cache and try again
-4. Still having issues? Please contact us before the workshop
-
-### Issue: `docker compose` command not found
-Try `docker-compose up` instead (with hyphen). This uses the legacy Docker Compose tool.
-
-### Issue: Docker image fails to download or run
-1. Ensure Docker Desktop is running and you have a stable internet connection
-2. Try restarting Docker Desktop
-3. If you're on an Apple Silicon Mac (M1/M2), the image should work but may take longer to download
-4. As a last resort, contact us for alternative setup instructions
-
-### Issue: Port 8888 already in use
-If you see an error about port 8888 being occupied:
-1. Stop any other Jupyter servers running on your machine
-2. Or modify the port in `docker-compose.yml` by changing `"8888:8888"` to `"8889:8888"` and use `http://127.0.0.1:8889/lab`
-
-### Getting Help
-If you encounter any setup issues, please:
-1. Check the troubleshooting section above
-2. Open an issue on this GitHub repository with details about your operating system and the exact error message
-3. Contact us directly before the workshop day
-
----
-
-## 🧹 Cleanup (Optional)
-
-After the workshop, you can free up disk space by removing the Docker image:
 ```bash
-docker rmi anthonychristidis/spatial-workshop:v1.3
+# 1. Clone the repository
+git clone https://github.com/ccb-hms/Spatial-Workshop.git
+cd Spatial-Workshop
+
+# 2. Start the workshop environment (~3.2 GB download)
+docker compose up
+```
+
+### Access JupyterLab
+
+- Open your browser and go to: `http://127.0.0.1:8888/lab`
+- Start with Notebook 1 in the file browser
+
+## 🐍 Option 2: Conda Environment Setup
+
+### Prerequisites
+
+1. **Install Miniconda/Anaconda**: Download from [docs.conda.io/en/latest/miniconda.html](docs.conda.io/en/latest/miniconda.html)
+2. **Install Git**: Download from [git-scm.com/downloads](git-scm.com/downloads) (if you don't have it)
+Setup Steps
+
+### Setup Steps
+
+```
+# 1. Clone the repository
+git clone https://github.com/ccb-hms/Spatial-Workshop.git
+cd Spatial-Workshop
+
+# 2. Create and activate the environment
+conda env create -f environment.yaml
+conda activate spatial-workshop
+
+# 3. Download the workshop data (~2.5 GB)
+# [INSERT_ZENODO_DOWNLOAD_COMMAND_HERE]
+
+# 4. Start JupyterLab
+jupyter lab
+```
+
+### Access JupyterLab
+
+- JupyterLab will open automatically in your browser
+- Start with Notebook 1 in the file browser
+
+## 🚀 During the Workshop
+
+**Important Notes:**
+
+- **Docker users**: Interactive visualization sections will be demonstrated by instructors
+- **Conda users**: All interactive features will work on your system
+- Both setups provide identical analysis capabilities for the core workshop content
+
+---
+
+## 🆘 Need Help?
+
+If you encounter setup issues:
+
+1. **Docker users**: Try `docker-compose up` (with hyphen) if `docker compose up` fails
+2. **Conda users**: Ensure you have sufficient disk space (~5 GB total)
+3. **Everyone**: Contact us if problems persist - we have backup solutions ready
+
+---
+
+## 🧹 Cleanup (After Workshop)
+
+**Docker users:**
+
+```
+docker rmi anthonychristidis/spatial-workshop:v1.4
+```
+
+**Conda users:**
+
+```
+conda env remove -n spatial-workshop
+```
+
+
+
+
+
+

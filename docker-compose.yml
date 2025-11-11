@@ -1,20 +1,12 @@
-# docker-compose.yml  (FINAL VERSION FOR ATTENDEES)
-
 version: '3.8'
 
 services:
   workshop:
-    # This is the most important change. Instead of 'build: .', we point
-    # directly to the image you pushed to Docker Hub.
-    image: anthonychristidis/spatial-workshop:v1.3
-
-    # The port mapping remains the same.
+    image: anthonychristidis/spatial-workshop:v1.4
     ports:
       - "8888:8888"
-
-    # Override the Jupyter command to fix authentication issues
     command: >
-      jupyter lab 
+      micromamba run -p /opt/conda/env jupyter lab 
       --ip=0.0.0.0 
       --port=8888 
       --no-browser 
