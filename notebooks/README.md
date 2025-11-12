@@ -1,27 +1,42 @@
-# Notebooks for the tutorial
-The tutorial uses the notebooks available in the current folder.
+# Workshop Notebooks
 
-# Additional notebooks (optional)
-In addition to the notebooks available in this folder, other notebooks from the docs are suitable to be used for teaching. A list of them follows.
-## Notebooks from `spatialdata-notebooks`
+This directory contains the four Jupyter notebooks for the "Spatial Omics Analysis with Python" workshop. We recommend running them in order to follow the complete analysis narrative.
 
-You can download the notebooks directly, or download all the notebooks of `spatialdata-notebooks` via `git clone https://github.com/scverse/spatialdata-notebooks`.
-- [Coordinate transformations](https://github.com/scverse/spatialdata-notebooks/blob/main/notebooks/examples/transformations.ipynb)
-- [Alignment via landmark annotations, query, aggregation](https://github.com/giovp/spatialdata-sandbox/blob/main/notebooks/czi_demo/xenium_visium.ipynb)
+---
 
-## Noteboks from `napari-spatialdata`
-- [`napari-spatialdata` scatterplot widget notebook part 1](https://github.com/fjorka/napari-spatialdata/blob/kmk-scatter-pg/docs/notebooks/scatterwidget.ipynb)
-- [`napari-spatialdata` scatterplot widget notebook part 2](https://github.com/fjorka/napari-spatialdata/blob/kmk-scatter-pg/docs/notebooks/scatterwidget_annotation.ipynb)
+### **Notebook 1: Introduction to the `SpatialData` Framework**
 
-## Getting the data
-Please note that some of optional the notebooks above require the download of additional datasets. Each notebook explains how to download the data. An alternative optional approach is to clone the `spatialdata-sandbox` repository via `git clone https://github.com/giovp/spatialdata-sandbox`. This repository contains several folders, one per dataset, with scripts (or instructions) on how to download the data and convert it to the SpatialData Zarr format.
+- **Goal:** Understand the fundamentals of the `SpatialData` object, the core data structure of the scverse ecosystem for spatial omics.
+- **What you'll learn:**
+  - How `SpatialData` organizes complex data (images, shapes, tables) into a single, unified container.
+  - How to load and inspect `SpatialData` objects from different technologies.
 
-For instance, the Visium HD subset data used in the notebooks of the `spatialdata-workshop` repository, used a dataset that we denote with `visium_hd_3.0.0_io_subset`. This is a subset of the full dataset available via `spatialdata-sandbox` at this link https://github.com/giovp/spatialdata-sandbox/tree/main/visium_hd_3.0.0_io.
-If you are interested in obtaining the full dataset, after cloning the `spatialdata-sandbox` repository, you can simply run the following to obtain both the raw data and the same data converted in the SpatialData Zarr format.
-```bash
-conda activate spatialdata-workshop
-# eventually, a requirements.txt file is present in the dataset folder, if additional packages are needed
-cd visium_hd_3.0.0_io
-python download.py
-python to_zarr.py
-```
+---
+
+### **Notebook 2: Interactive Visualization with `napari` and `Vitessce`**
+
+- **Goal:** Learn how to visually explore complex, multi-layered spatial data.
+- **What you'll learn:**
+  - Use the `napari-spatialdata` plugin to interactively view images, cell segmentations, and gene expression.
+  - See a demonstration of `Vitessce` for creating linked, web-based visualizations.
+  - Perform interactive tasks like annotating a region of interest (ROI).
+
+---
+
+### **Notebook 3: Data Processing and Clustering with `Scanpy`**
+
+- **Goal:** Go from raw gene counts to meaningful biological groups using a standard single-cell analysis workflow.
+- **What you'll learn:**
+  - Perform Quality Control (QC) to remove low-quality cells/spots.
+  - Normalize data, find highly variable genes, and run PCA for dimensionality reduction.
+  - Use the Leiden algorithm to cluster cells and visualize the results on a UMAP plot and back on the tissue image.
+
+---
+
+### **Notebook 4: Spatial Statistics with `Squidpy`**
+
+- **Goal:** Take the cell clusters from the previous notebook and ask quantitative questions about their spatial organization.
+- **What you'll learn:**
+  - Identify spatially variable genes that define tissue regions using Moran's I.
+  - Analyze the "social network" of your tissue by calculating neighborhood enrichment to see which cell types are found together.
+  - Quantify cell-cell co-occurrence to understand the strength of these spatial relationships.
