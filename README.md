@@ -20,42 +20,20 @@ In this 3-hour workshop, you will learn how to load, explore, and analyze data f
 
 We provide **two setup options** for the workshop. Choose the one that best fits your needs:
 
-### Option 1: Docker Setup (Recommended for Docker Users)
-
-- ✅ **Everything included**: Software, data, and notebooks pre-installed
-- ❌ **Limited interactivity**: Interactive visualization tools (napari) won't work in Docker
-
-### Option 2: Conda Environment Setup  
+### Option 1: Conda Environment Setup  (Recommended Setup)
 
 - ✅ **Full interactivity**: All visualization tools work, including napari
 - ❌ **Manual setup**: Requires installing dependencies and downloading data separately
 
+### Option 2: Docker Setup 
+
+- ✅ **Everything included**: Software, data, and notebooks pre-installed
+- ❌ **Limited interactivity**: Interactive visualization tools (napari) won't work in Docker
+
+
 ---
 
-## 🐳 Option 1: Docker Setup
-
-### Prerequisites
-
-1. **Install Docker Desktop:** Download from [docker.com/products/docker-desktop](https://www.docker.com/products/docker-desktop/) and follow installation instructions
-2. **Install Git:** Download from [git-scm.com/downloads](https://git-scm.com/downloads) (if you don't have it)
-
-### Setup Steps
-
-```bash
-# 1. Clone the repository
-git clone https://github.com/ccb-hms/Spatial-Workshop.git
-cd Spatial-Workshop
-
-# 2. Start the workshop environment (~3 GB download, ~7 GB storage)
-docker compose up
-```
-
-### Access JupyterLab
-
-- Open your browser and go to: `http://127.0.0.1:8888/lab`
-- Browse the notebooks in the file browser and run them in any order
-
-## 🐍 Option 2: Conda Environment Setup
+## 🐍 Option 1: Conda Environment Setup
 
 ### Prerequisites
 
@@ -99,12 +77,36 @@ jupyter lab
 - JupyterLab will open automatically in your browser
 - Browse the notebooks in the file browser and run them in any order
 
+## 🐳 Option 2: Docker Setup
+
+### Prerequisites
+
+1. **Install Docker Desktop:** Download from [docker.com/products/docker-desktop](https://www.docker.com/products/docker-desktop/) and follow installation instructions
+2. **Install Git:** Download from [git-scm.com/downloads](https://git-scm.com/downloads) (if you don't have it)
+
+### Setup Steps
+
+```bash
+# 1. Clone the repository
+git clone https://github.com/ccb-hms/Spatial-Workshop.git
+cd Spatial-Workshop
+
+# 2. Start the workshop environment (~3 GB download, ~7 GB storage)
+docker compose up
+```
+
+### Access JupyterLab
+
+- Open your browser and go to: `http://127.0.0.1:8888/lab`
+- Browse the notebooks in the file browser and run them in any order
+
+
 ## 🚀 During the Workshop
 
 **Important Notes:**
 
-- **Docker users**: Interactive visualization sections will be demonstrated by instructors
 - **Conda users**: All interactive features will work on your system
+- **Docker users**: Interactive visualization sections will be demonstrated by instructors
 - Both setups provide identical analysis capabilities for the core workshop content
 
 ---
@@ -113,24 +115,22 @@ jupyter lab
 
 If you encounter setup issues:
 
-1. **Docker users**: Try `docker-compose up` (with hyphen) if `docker compose up` fails
-2. **Conda users**: Ensure you have sufficient disk space (~11 GB total: 9 GB environment + 2 GB data)
-3. **Everyone**: Don't stress about setup issues, we have backup solutions and will help everyone get running during the workshop
-
+1. **Conda users**: Ensure you have sufficient disk space (~11 GB total: 9 GB environment + 2 GB data)
+2. **Docker users**: Try `docker-compose up` (with hyphen) if `docker compose up` fails
 ---
 
 ## 🧹 Cleanup (After Workshop)
-
-**Docker users:**
-
-```
-docker rmi anthonychristidis/spatial-workshop:v1.4
-```
 
 **Conda users:**
 
 ```
 conda env remove -n spatial-workshop
+```
+
+**Docker users:**
+
+```
+docker rmi anthonychristidis/spatial-workshop:v1.4
 ```
 
 ---
