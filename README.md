@@ -4,7 +4,7 @@
 
 Welcome! This repository contains the materials for the hands-on workshop on analyzing spatial omics data with Python and the [scverse](https://scverse.org) ecosystem.
 
-In this 3-hour workshop, you will learn how to load, explore, and analyze data from different spatial technologies like Visium and Xenium. We will cover established workflows, from interactive visualization with [napari](https://napari.org) to cell type clustering with [Scanpy](https://scanpy.readthedocs.io) and computing spatial statistics with [Squidpy](https://squidpy.readthedocs.io).
+In this 3-hour workshop, you will learn how to load, explore, and analyze data from different spatial technologies like MERFISH, Visium and Xenium. We will cover established workflows, from interactive visualization with [napari](https://napari.org) to cell type clustering with [Scanpy](https://scanpy.readthedocs.io) and computing spatial statistics with [Squidpy](https://squidpy.readthedocs.io).
 
 ---
 
