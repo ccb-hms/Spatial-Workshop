@@ -25,3 +25,6 @@ notebooks/spatialdata-sandbox
 *.ppt
 *.key
 *.odp
+# pixi environments
+.pixi/*
+!.pixi/config.toml

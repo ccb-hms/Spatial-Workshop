@@ -1,0 +1,33 @@
+[workspace]
+authors = ["Tim Treis <tim.treis@stud.uni-heidelberg.de>"]
+channels = ["conda-forge"]
+name = "Spatial-Workshop"
+platforms = ["win-64", "linux-64", "osx-64", "osx-arm64"]
+version = "0.1.0"
+
+[dependencies]
+python = "3.11.*"
+jupyterlab = ">=4.4.10,<5"
+ipywidgets = ">=7.6.0"
+spatialdata = ">=0.5.0,<0.7"
+# spatialdata-io = ">=0.5.1,<0.6"
+spatialdata-plot = ">=0.2.13,<0.3"
+scanpy = ">=1.11.5,<2"
+squidpy = ">=1.6.5,<2"
+napari = ">=0.5.0,<0.5.6"
+napari-spatialdata = ">=0.5.4.post0,<0.6"
+numpy = "*"
+pandas = ">=2.3.3,<3"
+matplotlib = ">=3.10.7,<4"
+python-igraph = ">=1.0.0,<2"
+leidenalg = ">=0.11.0,<0.12"
+gdown = ">=5.2.0,<6"
+pyqt = ">=5.15.11,<6"
+
+[tasks]
+kernel-install = "python -m ipykernel install --user --name spatial-workshop --display-name \"Spatial Workshop (HMS)\""
+download-data = "python scripts/download_data.py"
+
+[tasks.lab]
+depends-on = ["kernel-install"]
+cmd = "jupyter lab --ip=127.0.0.1 --port=8888 --ServerApp.token= --ServerApp.password= --ServerApp.disable_check_xsrf=True"
