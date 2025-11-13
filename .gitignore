@@ -31,3 +31,6 @@ notebooks/spatialdata-sandbox
 .
 # pixi lock file
 pixi.lock
+
+# Notebooks with output
+notebooks_output/
